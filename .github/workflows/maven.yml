@@ -20,11 +20,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
 
-    - name: Build with Maven
+    - name: Build all modules with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Upload built JARs
+    - name: Upload all module JARs
       uses: actions/upload-artifact@v4
       with:
         name: built-jars
-        path: target/*.jar
+        path: '**/target/*.jar'
