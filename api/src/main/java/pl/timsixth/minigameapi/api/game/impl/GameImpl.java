@@ -41,7 +41,6 @@ public class GameImpl implements Game {
     @Override
     public void setState(GameState gameState) {
         this.state = gameState;
-        gameState.run();
     }
 
     @Override
